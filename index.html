@@ -6,91 +6,272 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
+
+            margin: 0;
+            padding: 0;
         }
 
-        #container {
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
             width: 100%;
+            height: 100%;
+            margin: auto;
 
-            display: flex;
-            flex-direction: column;
-
-            position: relative;
-        }
-
-
-
-        #wda {
-            text-align: center;
+            /* border: 1px solid green; */
         }
 
         img {
             width: 50%;
         }
 
+        #wda {
+            text-align: center;
+            margin: 20px;
+        }
 
+        .items {
+            margin: 20px;
 
-        @media (min-width: 992px) {
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .line {
+            width: 90%;
+            height: 1px;
+            margin: auto;
+
+            background: #aaa;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                width: 100%;
+                max-width: 1200px;
+
+                position: relative;
+            }
 
             #wda {
+                width: calc(900px - 50%);
+
+                /* border: 1px solid blue; */
+                margin: 0px;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+
+                #wda-text {
+                    width: 100%;
+                    position: absolute;
+
+                    bottom: 0%;
+
+                    transform: translateY(150%);
+                }
+            }
+
+            .items {
                 position: absolute;
 
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
+                width: calc(900px - 55%);
 
-                width: 20%;
+                /* border: 1px solid red; */
+                text-align: center;
+
+                margin: 0px;
+
+                p {
+                    display: none;
+                }
+
+                h1 {
+                    margin: 0px;
+                }
+
+                font-size: 0.7rem;
             }
 
             #html {
+                top: 10%;
+                left: 0%;
+            }
+
+            #toHTML {
                 position: absolute;
-
-                top: 0;
-                left: 0;
-            }
-
-            #html p {
-                display: none;
-            }
-
-            #html h1 {
-                text-align: center;
+                top: 35%;
+                left: 13%;
+                width: 30%;
+                transform: rotate(22deg);
             }
 
             #css {
-                display: none;
+                top: 5%;
+                left: 20%;
+            }
+
+            #toCSS {
+                position: absolute;
+                top: 30%;
+                left: 32%;
+                width: 14%;
+                transform: rotate(47deg);
+            }
+
+            #js {
+                top: 40%;
+                left: 5%;
+            }
+
+            #toJS {
+                position: absolute;
+                top: 51%;
+                left: 19%;
+                width: 24%;
+                transform: rotate(-6deg);
+            }
+
+            #jq {
+                bottom: 10%;
+                left: 17%;
+            }
+
+            #toJQ {
+                position: absolute;
+                top: 61%;
+                left: 31%;
+                width: 14%;
+                transform: rotate(-36deg);
+            }
+
+            #bs {
+                top: 10%;
+                right: 15%;
+            }
+
+            #toBS {
+                position: absolute;
+                top: 33%;
+                left: 55%;
+                width: 17%;
+                transform: rotate(-34deg);
+            }
+
+            #sass {
+                top: 30%;
+                right: 0%;
+            }
+
+            #toSass {
+                position: absolute;
+                top: 43%;
+                left: 57%;
+                width: 26%;
+                transform: rotate(-7deg);
+            }
+
+            #vue {
+                bottom: 20%;
+                right: 10%;
+            }
+
+            #toVue {
+                position: absolute;
+                top: 58%;
+                left: 56%;
+                width: 19%;
+                transform: rotate(28deg);
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="container">
-
+    <div class="container">
         <div id="wda">
             <img src="./wda/wda.png">
             <h1>泰山職訓局</h1>
-            <p>
-                照片就不中有執法根據第二不起本月一切，就能加油日期，較大我家是我服務電池供應編號好看標誌儘量，預覽記得，當前位置簡介不可以，均為事實上這麼多返回一股這個需求，開口性格說法策劃但在壓縮本身填寫大盤結果說話位元，實驗輔助補充美女是什麼，或是全面國際，自主暴力。
-            </p>
-            <hr>
+            <div id="wda-text">
+                <h2>從零開始的網頁設計課程</h2>
+                <p>轉職網頁開發人員&nbsp;&nbsp;&nbsp;掌握就業必備職能</p>
+                <p>由淺入深學習技術&nbsp;&nbsp;&nbsp;強化職場的競爭力</p>
+            </div>
         </div>
+        <!-- HTML -->
+        <div id="toHTML" class="line"></div>
         <div id="html" class="items">
             <img src="./wda/html.png">
             <h1>HTML</h1>
-            <p>照片就不中有執法根據第二不起本月一切，就能加油日期，較大我家是我服務電池供應編號好看標誌儘量，預覽記得，當前位置簡介不可以，均為事實上這麼多返回一股這個需求，開口性格說法策劃但在壓縮本身填寫大盤結果說話位元，實驗輔助補充美女是什麼，或是全面國際，自主暴力。
-            </p>
-            <hr>
+            <p>超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。 HTML 是一種基礎技術，常與 CSS、JavaScript
+                一起被眾多網站用於設計賞心悅目的網頁、網頁應用程式以及行 動應用程式的使用者介面。網頁瀏覽器可以讀取 HTML 檔案，並將其彩現成視覺化網頁。HTML 描述了一個網站
+                的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。</p>
         </div>
-        <div id="css">
+        <!-- CSS -->
+        <div id="toCSS" class="line"></div>
+        <div id="css" class="items">
             <img src="./wda/css.png">
-            <h1>CSS</h1>
-            <p>照片就不中有執法根據第二不起本月一切，就能加油日期，較大我家是我服務電池供應編號好看標誌儘量，預覽記得，當前位置簡介不可以，均為事實上這麼多返回一股這個需求，開口性格說法策劃但在壓縮本身填寫大盤結果說話位元，實驗輔助補充美女是什麼，或是全面國際，自主暴力。
+            <h1>CSS3</h1>
+            <p>層疊樣式表（英語：Cascading Style Sheets，簡寫CSS），又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣 式表，一種用來為結構化文件（如 HTML 文件或 XML
+                應用）添加樣式（字型、間距和顏色等）的電腦語言，由 W3C 定義和維護。目前最新版本是 CSS2.1，為 W3C 的推薦標準。CSS3 現在已被大部分現代瀏覽器支援，而下 一版的 CSS4 仍在開發中。
             </p>
-            <hr>
+        </div>
+        <!-- JS -->
+        <div id="toJS" class="line"></div>
+        <div id="js" class="items">
+            <img src="./wda/js.png">
+            <h1>JavaScript</h1>
+            <p>JavaScript，通常縮寫為 JS，是一種進階直譯語言的程式語言。JavaScript 是一門基於原型、函式先行的語言，是 一門多範式的語言，它支援物件導向編程，指令式程式設計，以及函式語言程式設計。
+            </p>
+        </div>
+        <!-- JQuery -->
+        <div id="toJQ" class="line"></div>
+        <div id="jq" class="items">
+            <img src="./wda/jq.png">
+            <h1>JQuery</h1>
+            <p>jQuery 是一套跨瀏覽器的 JavaScript 函式庫，簡化 HTML 與 JavaScript 之間的操作。全球前 10,000 個存取最高的 網站中，有 65% 使用了jQuery，是目前最受歡迎的
+                JavaScript 函式庫。
+            </p>
+        </div>
+        <!-- Bootstrap -->
+        <div id="toBS" class="line"></div>
+        <div id="bs" class="items">
+            <img src="./wda/bs.png">
+            <h1>Bootstrap</h1>
+            <p>Bootstrap 是一組用於網站和網路應用程式開發的開源前端（所謂「前端」，指的是展現給終端使用者的介面。與 之對應的「後端」是在伺服器上面執行的程式碼）框架，包括 HTML、CSS及JavaScript
+                的框架，提供字體排印、 表單、按鈕、導航及其他各種元件及 Javascript 擴充套件，旨在使動態網頁和 Web 應用的開發更加容易。
+            </p>
+        </div>
+        <!-- Sass -->
+        <div id="toSass" class="line"></div>
+        <div id="sass" class="items">
+            <img src="./wda/sass.png">
+            <h1>Sass</h1>
+            <p>Sass（英文全稱：Syntactically Awesome Stylesheets）是一個最初由Hampton Catlin設計並由Natalie
+                Weizenbaum開發的層疊樣式表語言。在開發最初版本之後，Weizenbaum和Chris
+                Eppstein繼續通過SassScript來繼續擴充Sass的功能。SassScript是一個在Sass檔案中使用的小型手稿語言。
+            </p>
+        </div>
+        <!-- Vue -->
+        <div id="toVue" class="line"></div>
+        <div id="vue" class="items">
+            <img src="./wda/vue.png">
+            <h1>Vue.js</h1>
+            <p>Vue (發音為 /vjuː/，類似 view) 是一款用於構建用戶界面的 JavaScript 框架。它基於標準 HTML、CSS 和 JavaScript
+                構建，並提供了一套聲明式的、組件化的編程模型，幫助你高效地開發用戶界面。無論是簡單還是複雜的界面，Vue 都可以勝任。</p>
         </div>
     </div>
 </body>
